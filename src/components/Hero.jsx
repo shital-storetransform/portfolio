@@ -5,19 +5,20 @@ import InteractiveAvatar from './InteractiveAvatar';
 
 const Hero = () => {
     return (
-        <section style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
-            {/* Background Elements */}
-            <div style={{ position: 'absolute', top: '20%', left: '10%', width: '300px', height: '300px', background: 'var(--primary-color)', filter: 'blur(150px)', opacity: 0.2, borderRadius: '50%' }} />
-            <div style={{ position: 'absolute', bottom: '20%', right: '10%', width: '400px', height: '400px', background: 'var(--secondary-color)', filter: 'blur(150px)', opacity: 0.2, borderRadius: '50%' }} />
+        <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', padding: '100px 0 50px 0' }}>
+            {/* Background Elements - Made Responsive */}
+            <div className="hero-bg-blob" style={{ position: 'absolute', top: '20%', left: '10%', width: '300px', height: '300px', background: 'var(--primary-color)', filter: 'blur(150px)', opacity: 0.2, borderRadius: '50%' }} />
+            <div className="hero-bg-blob" style={{ position: 'absolute', bottom: '20%', right: '10%', width: '400px', height: '400px', background: 'var(--secondary-color)', filter: 'blur(150px)', opacity: 0.2, borderRadius: '50%' }} />
 
-            <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', flexWrap: 'wrap-reverse', gap: '4rem', zIndex: 1 }}>
+            <div className="container hero-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', flexWrap: 'wrap-reverse', gap: '4rem', zIndex: 1, width: '100%' }}>
 
                 {/* Text Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    style={{ flex: 1, minWidth: '300px' }}
+                    className="hero-text"
+                    style={{ flex: 1, minWidth: '300px', display: 'flex', flexDirection: 'column' }}
                 >
                     <motion.h2
                         initial={{ opacity: 0 }}
@@ -38,7 +39,7 @@ const Hero = () => {
                         Transforming ideas into robust digital experiences. Specializing in high-performance WordPress sites, WooCommerce, and Headless React applications with 2+ years of professional excellence.
                     </p>
 
-                    <div style={{ display: 'flex', gap: '1rem' }}>
+                    <div className="hero-buttons" style={{ display: 'flex', gap: '1rem' }}>
                         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="glass-card" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)' }}>
                             <FaGithub size={20} /> GitHub
                         </a>
@@ -69,11 +70,11 @@ const Hero = () => {
                         flex: 1,
                         display: 'flex',
                         justifyContent: 'center',
-                        minWidth: '300px'
+                        minWidth: '280px'
                     }}
                 >
                     {/* Width/Height wrapper for positioning */}
-                    <div style={{ position: 'relative', width: '350px', height: '350px' }}>
+                    <div className="avatar-container" style={{ position: 'relative', width: '350px', height: '350px' }}>
 
                         {/* Avatar Container - Circular Mask */}
                         <div style={{

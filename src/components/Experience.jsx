@@ -21,7 +21,7 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section id="experience" style={{ padding: '8rem 0' }}>
+        <section id="experience" style={{ padding: '6rem 0' }}>
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -40,9 +40,19 @@ const Experience = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="glass-card"
-                            style={{ padding: '3rem', position: 'relative', borderLeft: '4px solid var(--primary-color)' }}
+                            className="glass-card experience-card"
+                            style={{ position: 'relative', borderLeft: '4px solid var(--primary-color)' }}
                         >
+                            <style>{`
+                                .experience-card {
+                                    padding: 3rem;
+                                }
+                                @media (max-width: 768px) {
+                                    .experience-card {
+                                        padding: 1.5rem !important;
+                                    }
+                                }
+                            `}</style>
                             <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginBottom: '1rem' }}>
                                 <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)' }}>{exp.role}</h3>
                                 <span className="glass-card" style={{ padding: '0.2rem 0.8rem', fontSize: '0.8rem' }}>{exp.period}</span>

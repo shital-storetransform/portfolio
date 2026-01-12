@@ -85,7 +85,7 @@ const reactProjects = [
 
 const Projects = () => {
     return (
-        <section id="projects" style={{ padding: '10rem 0' }}>
+        <section id="projects" style={{ padding: '6rem 0' }}>
             <div className="container">
 
                 {/* --- WordPress Section --- */}
@@ -98,7 +98,7 @@ const Projects = () => {
                     WordPress <span className="gradient-text">Solutions</span>
                 </motion.h2>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem', marginBottom: '8rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '6rem' }}>
                     {wordpressProjects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -178,7 +178,7 @@ const Projects = () => {
                     React <span className="gradient-text">Projects</span>
                 </motion.h2>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                     {reactProjects.map((project, index) => (
                         <motion.a
                             href={project.url}

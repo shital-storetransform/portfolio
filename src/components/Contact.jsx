@@ -19,7 +19,7 @@ const Contact = () => {
                     </p>
 
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <a href="tel:+919876543210" className="glass-card" style={{
+                        <a href="tel:+919876543210" className="glass-card contact-btn" style={{
                             display: 'inline-flex',
                             alignItems: 'center',
                             gap: '0.8rem',
@@ -29,12 +29,13 @@ const Contact = () => {
                             border: 'none',
                             color: 'white',
                             fontWeight: 'bold',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            textDecoration: 'none'
                         }}>
                             <FaPhoneAlt /> Call Me
                         </a>
 
-                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="glass-card" style={{
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="glass-card contact-btn" style={{
                             display: 'inline-flex',
                             alignItems: 'center',
                             gap: '0.8rem',
@@ -44,11 +45,22 @@ const Contact = () => {
                             border: 'none',
                             color: 'white',
                             fontWeight: 'bold',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            textDecoration: 'none'
                         }}>
                             <FaComments /> Let's Chat
                         </a>
                     </div>
+                    <style>{`
+                        @media (max-width: 480px) {
+                            .contact-btn {
+                                width: 100%;
+                                justify-content: center;
+                                font-size: 1rem !important;
+                                padding: 0.8rem 1rem !important;
+                            }
+                        }
+                    `}</style>
                 </motion.div>
 
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
