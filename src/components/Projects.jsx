@@ -39,8 +39,18 @@ const wordpressProjects = [
     }
 ];
 
+import ratImg from '../assets/rat.png';
+
 // New React Projects (With Images)
 const reactProjects = [
+    {
+        title: 'Rat in a Maze',
+        category: 'Game Development',
+        description: 'A retro pixel-art puzzle game where you guide a hungry rat to the cheese. Features grid-based movement and collision detection.',
+        tags: ['React', 'Game', 'Pixel Art'],
+        image: ratImg,
+        url: 'http://localhost:5174' // Assuming it runs on this port
+    },
     {
         title: 'Quest for the Pixel Orb',
         category: 'Game Development',
